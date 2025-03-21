@@ -1,21 +1,21 @@
 import React from "react";
-import NewsHeader from "../Components/News/NewsHeader";
-import NewsSearch from "../Components/News/NewsSearch";
 import NewsBreadcrumb from "../Components/News/NewsBreadcrumb";
 import NewsLatestnews from "../Components/News/NewsLatestnews";
 import NewsLogoCarousel from "../Components/News/NewsLogocarousel";
-import NewsFooter from "../Components/News/NewsFooter";
-import NewsCopyright from "../Components/News/NewsCopyright";
+import Header from "../Components/path/header";
+import Search from "../Components/path/search";
+import Footer from "../Components/path/footer";
+import Copyright from "../Components/path/copyright";
 const News = () => {
   return (
     <div>
-      <NewsHeader />
-      <NewsSearch />
+      <Header />
+      <Search />
       <NewsBreadcrumb />
       <NewsLatestnews />
       <NewsLogoCarousel />
-      <NewsFooter />
-      <NewsCopyright />
+      <Footer />
+      <Copyright />
     </div>
   );
 };

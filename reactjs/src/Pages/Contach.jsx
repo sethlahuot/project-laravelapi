@@ -1,23 +1,23 @@
 import React from "react";
-import ContactHeader from "../Components/Contact/ContactHeader";
-import ContactSearch from "../Components/Contact/ContactSearch";
 import ContactBreadcrumb from "../Components/Contact/ContactBreadcrumb";
 import ContactArea from "../Components/Contact/ContactArea";
 import ConatctLocation from "../Components/Contact/ConatctLocation";
 import ContactMap from "../Components/Contact/ContactMap";
-import ContactFooter from "../Components/Contact/ContactFooter";
-import ContactCopyright from "../Components/Contact/ContactCopyright";
+import Header from "../Components/path/header";
+import Search from "../Components/path/search";
+import Footer from "../Components/path/footer";
+import Copyright from "../Components/path/copyright";
 const Contach = () => {
   return (
     <div>
-      <ContactHeader />
-      <ContactSearch />
+      <Header />
+      <Search />
       <ContactBreadcrumb />
       <ContactArea />
       <ConatctLocation />
       <ContactMap />
-      <ContactFooter />
-      <ContactCopyright />
+      <Footer />
+      <Copyright />
     </div>
   );
 };

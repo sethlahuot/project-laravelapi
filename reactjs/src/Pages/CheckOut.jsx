@@ -1,22 +1,22 @@
 import React from "react";
-import CheckoutHeader from "../Components/CheckOut/CheckoutHeader";
-import CheckoutSearch from "../Components/CheckOut/CheckoutSearch";
 import CheckoutBreadcrumb from "../Components/CheckOut/CheckoutBreadcrumb";
 import CheckoutArea from "../Components/CheckOut/CheckoutArea";
 import CheckoutLogoCarousal from "../Components/CheckOut/CheckoutLogocarousel";
-import CheckoutFooter from "../Components/CheckOut/CheckoutFooter";
-import CheckoutCopyright from "../Components/CheckOut/CheckoutCopyright";
+import Header from "../Components/path/header";
+import Search from "../Components/path/search";
+import Footer from "../Components/path/footer";
+import Copyright from "../Components/path/copyright";
 
 const CheckOut = () => {
   return (
     <div>
-      <CheckoutHeader />
-      <CheckoutSearch />
+      <Header />
+      <Search />
       <CheckoutBreadcrumb />
       <CheckoutArea />
       <CheckoutLogoCarousal />
-      <CheckoutFooter />
-      <CheckoutCopyright />
+      <Footer />
+      <Copyright />
     </div>
   );
 };

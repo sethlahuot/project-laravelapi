@@ -1,21 +1,21 @@
 import React from "react";
-import CartHeader from "../Components/Cart/CartHeader";
-import CartSearch from "../Components/Cart/CartSearch";
 import CartBreadcrumb from "../Components/Cart/CartBreadcrumb";
 import CartSeaction from "../Components/Cart/CartSeaction";
 import CartLogoCarousal from "../Components/Cart/CartLogocarousel";
-import CartFooter from "../Components/Cart/CartFooter";
-import CartCopyright from "../Components/Cart/CartCopyright";
+import Header from "../Components/path/header";
+import Search from "../Components/path/search";
+import Footer from "../Components/path/footer";
+import Copyright from "../Components/path/copyright";
 const Cart = () => {
   return (
     <div>
-      <CartHeader />
-      <CartSearch />
+      <Header />
+      <Search />
       <CartBreadcrumb />
       <CartSeaction />
       <CartLogoCarousal />
-      <CartFooter />
-      <CartCopyright />
+      <Footer />
+      <Copyright />
     </div>
   );
 };

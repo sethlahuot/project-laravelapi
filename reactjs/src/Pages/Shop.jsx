@@ -1,21 +1,21 @@
 import React from "react";
-import ShopHeader from "../Components/Shop/ShopHeader";
-import ShopSearch from "../Components/Shop/ShopSearch";
 import ShopBreadcrumb from "../Components/Shop/ShopBreadcrumb";
 import ShopProduct from "../Components/Shop/ShopProduct";
 import ShopLogoCarousel from "../Components/Shop/ShopLogocarousel";
-import ShopFooter from "../Components/Shop/ShopFooter";
-import ShopCopyright from "../Components/Shop/ShopCopyright";
+import Header from "../Components/path/header";
+import Search from "../Components/path/search";
+import Footer from "../Components/path/footer";
+import Copyright from "../Components/path/copyright";
 const Shop = () => {
   return (
     <div>
-      <ShopHeader />
-      <ShopSearch />
+      <Header />
+      <Search />
       <ShopBreadcrumb />
       <ShopProduct />
       <ShopLogoCarousel />
-      <ShopFooter />
-      <ShopCopyright />
+      <Footer />
+      <Copyright />
     </div>
   );
 };
