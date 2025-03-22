@@ -15,7 +15,17 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
+import axios from "axios";
+
+axios.defaults.baseURL = "http://127.0.0.1:8000/";
+axios.defaults.headers.post['Content-Type'] = 'application/json' ;
+axios.defaults.headers.post['Accept'] = 'application/json' ;
+
+axios.defaults.withCredentials = true;
+axios.defaults.withXSRFToken = true;
 
 function App() {
   return (
@@ -35,7 +45,10 @@ function App() {
         <Route path="/admin" element={<Navigate to="/admin/dashboard" />} />
         <Route path="/admin/dashboard" element={<MasterLayout />} /> 
         <Route path="/admin/profile" element={<Profile />} /> 
-        
+
+        {/* auth */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         </Routes>
     </Router>
   );
