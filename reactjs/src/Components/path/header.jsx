@@ -1,8 +1,52 @@
 import React from "react";
 import logo from "../img/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import axios from "axios";
 
-const header = () => {
+const Header = () => {
+
+  const navigate = useNavigate();
+  const logoutSubmit = (e) => {
+    e.preventDefault();
+    axios.post(`/api/logout`).then(res => {
+      if(res.data.status === 200)
+      {
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('auth_name');
+        window.location.reload();
+        swal("Success", res.data.message, "success");
+        navigate("/");
+      }
+    })
+  }
+  var AuthButtons = '';
+  if(!localStorage.getItem('auth_token'))
+  {
+    AuthButtons = (
+      <Link className="shopping-cart" to={`/login`}>
+        <i className="fa fa-sign-in"></i>
+      </Link>                   
+    )
+  }
+  else
+  {
+    AuthButtons = (
+      <Link>
+      <i className="fa fa-user" style={{ color: 'White' }}></i>
+        <ul className="sub-menu">
+          <li>
+          <button onClick={logoutSubmit} className="shopping-cart" to={`/logout`} style={{ color: 'red' }}>
+            <i className="fa fa-sign-out"></i>
+            Logout
+          </button>
+          </li>
+        </ul>
+        </Link>  
+    )
+  }
+
+
   return (
     <div>
       <div className="top-header-area" id="sticker">
@@ -55,8 +99,13 @@ const header = () => {
                         <a className="mobile-hide search-bar-icon" href="#">
                           <i className="fas fa-search"></i>
                         </a>
+                        
+                        
+                        {AuthButtons}
+                        
                       </div>
                     </li>
+                    
                   </ul>
                 </nav>
                 <a className="mobile-show search-bar-icon" href="#">
@@ -72,4 +121,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
